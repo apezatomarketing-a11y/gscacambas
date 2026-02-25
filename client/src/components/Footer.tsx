@@ -40,19 +40,19 @@ Para questões sobre privacidade, entre em contato conosco através do WhatsApp 
 
     termos: `Termos de Uso
 
-Bem-vindo ao site da Jacaré Entulhos. Ao acessar este site, você concorda com os seguintes termos:
+Bem-vindo ao site da Jacaré Entulho. Ao acessar este site, você concorda com os seguintes termos:
 
 1. Uso Autorizado
 Este site é fornecido apenas para fins informativos e comerciais. Você concorda em usar este site apenas para fins legais.
 
 2. Serviços
-A Jacaré Entulhos oferece serviços de locação de caçambas para entulho e resíduos de construção civil na região de Jacareí, São José dos Campos e Guararema.
+A Jacaré Entulho oferece serviços de locação de caçambas para entulho e resíduos de construção civil na região de Jacareí, São José dos Campos e Guararema.
 
 3. Responsabilidades do Cliente
 O cliente é responsável pelo correto uso da caçamba, respeitando as normas municipais e ambientais vigentes.
 
 4. Isenção de Responsabilidade
-A Jacaré Entulhos não será responsável por danos causados pelo uso inadequado das caçambas locadas.
+A Jacaré Entulho não será responsável por danos causados pelo uso inadequado das caçambas locadas.
 
 5. Modificações
 Reservamos o direito de modificar estes termos a qualquer momento.
@@ -92,7 +92,7 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
             {/* Brand */}
             <div className="flex flex-col items-start group">
               <div className="w-48 h-24 overflow-hidden mb-6 group-hover:scale-105 transition-all duration-500 p-1">
-                <img src="/assets/images/logo-jacare-texto.png" alt="Jacaré Entulhos" className="w-full h-full object-contain" />
+                <img src="/assets/images/logo-jacare-texto.png" alt="Jacaré Entulho" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-black text-xl mb-2 text-primary">{COMPANY_INFO.name}</h3>
               <p className="text-sm text-secondary-foreground/70 font-medium max-w-[200px] leading-relaxed">{COMPANY_INFO.tagline}</p>

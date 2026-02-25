@@ -25,14 +25,14 @@ export const GOOGLE_MAPS = {
 
 // WhatsApp Messages
 export const WHATSAPP_MESSAGES = {
-  floatingButton: 'Olá! Vim do site da Jacaré Entulhos e gostaria de solicitar um orçamento!',
+  floatingButton: 'Olá! Vim do site da Jacaré Entulho e gostaria de solicitar um orçamento!',
   orcamento: 'Olá! Gostaria de solicitar um orçamento para aluguel de caçamba.',
   residencial: 'Olá! Preciso de uma caçamba para obra residencial. Podem me ajudar?',
   comercial: 'Olá! Preciso de caçambas para obra comercial. Quais são as condições?',
   empresas: 'Olá! Tenho interesse no Plano Empresas Jacaré. Podem me informar sobre as condições?',
   condominio: 'Olá! Preciso de caçambas para condomínio. Quais são as condições?',
   engenheiro: 'Olá! Sou engenheiro/empreiteiro e gostaria de conhecer as condições para parceria.',
-  contact: 'Olá! Entrei em contato através do formulário do site da Jacaré Entulhos.',
+  contact: 'Olá! Entrei em contato através do formulário do site da Jacaré Entulho.',
 } as const;
 
 // Navigation Items (Single Page Anchors)
@@ -86,7 +86,7 @@ export const SERVICES = [
 
 // Company Info
 export const COMPANY_INFO = {
-  name: 'Jacaré Entulhos',
+  name: 'Jacaré Entulho',
   title: 'Aluguel de Caçambas',
   tagline: 'A solução certa para o seu entulho',
   year: new Date().getFullYear(),
@@ -103,12 +103,12 @@ export const ANIMATION_TIMINGS = {
   stagger: 80,
 } as const;
 
-// Gallery Images - v2 com cache busting
-const CACHE_BUST = '?v=2025-02-25-final-30';
+// Gallery Images - v3 com cache busting (Jacaré Entulho correto)
+const CACHE_BUST = '?v=2025-02-25-v3-final';
 export const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => ({
   id: i + 1,
-  src: `/assets/images/galeria-v2-${i + 1}.jpg${CACHE_BUST}`,
-  alt: `Jacaré Entulhos - Obra ${i + 1}`,
+  src: `/assets/images/galeria-v3-${i + 1}.jpg${CACHE_BUST}`,
+  alt: `Jacaré Entulho - Obra ${i + 1}`,
 }));
 
 // Featured Images
@@ -185,7 +185,7 @@ export const TESTIMONIALS = [
   {
     name: 'Carlos Eduardo',
     role: 'Proprietário - Reforma Residencial',
-    text: 'A entrega foi super rápida e o atendimento da Jacaré Entulhos foi excelente. Caçamba no local no mesmo dia que liguei!',
+    text: 'A entrega foi super rápida e o atendimento da Jacaré Entulho foi excelente. Caçamba no local no mesmo dia que liguei!',
     rating: 5,
     city: 'Jacareí',
   },
