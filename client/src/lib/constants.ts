@@ -113,8 +113,8 @@ export const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => ({
 
 // Featured Images
 export const FEATURED_IMAGES = {
-  hero: '/assets/images/hero-cacamba.jpg',
-  sobre: '/assets/images/sobre-empresa.jpg',
+  hero: '/assets/images/hero-cacamba-v2.jpg?v=2025-02-25-final-hero',
+  sobre: '/assets/images/sobre-empresa-v2.jpg?v=2025-02-25-final-sobre',
   residencial: '/assets/images/servico-residencial.jpg',
   comercial: '/assets/images/servico-comercial.jpg',
   industrial: '/assets/images/servico-industrial.jpg',
