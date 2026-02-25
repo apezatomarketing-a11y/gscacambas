@@ -1,9 +1,9 @@
 // Contact Information
 export const CONTACT_INFO = {
-  whatsapp: '5512999999999', // Número a ser preenchido pelo cliente
-  phone: '(12) 99999-9999', // Número a ser preenchido pelo cliente
-  email: 'contato@gscacambas.com.br', // Email a ser preenchido pelo cliente
-  address: 'Jacareí, SP', // Endereço a ser preenchido pelo cliente
+  whatsapp: '5512988509555',
+  phone: '(12) 98850-9555',
+  email: 'jacareentulho@gmail.com',
+  address: 'Jacareí, SP',
   addressShort: 'Jacareí, SP',
   city: 'Jacareí',
   state: 'SP',
@@ -11,27 +11,28 @@ export const CONTACT_INFO = {
 
 // Social Media Links
 export const SOCIAL_MEDIA = {
-  instagram: 'https://www.instagram.com/', // Link a ser preenchido pelo cliente
-  facebook: 'https://www.facebook.com/', // Link a ser preenchido pelo cliente
-  whatsapp: 'https://wa.me/5512999999999', // Link a ser preenchido pelo cliente
+  instagram: 'https://www.instagram.com/',
+  facebook: 'https://www.facebook.com/',
+  whatsapp: 'https://wa.me/5512988509555',
 } as const;
 
 // Google Maps
 export const GOOGLE_MAPS = {
-  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117893.53!2d-45.9654!3d-23.3045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sJacare%C3%AD%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890',
-  mapsLink: 'https://maps.app.goo.gl/', // Link a ser preenchido pelo cliente
+  // Cobertura Jacareí, São José dos Campos e Guararema
+  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235789.23!2d-46.10!3d-23.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sJacare%C3%AD%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20e%20Guararema!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  mapsLink: 'https://www.google.com/maps/dir//Jacareí,+São+José+dos+Campos,+Guararema',
 } as const;
 
 // WhatsApp Messages
 export const WHATSAPP_MESSAGES = {
-  floatingButton: 'Olá! Vim do site da GS Caçambas e gostaria de solicitar um orçamento!',
+  floatingButton: 'Olá! Vim do site da Jacaré Entulhos e gostaria de solicitar um orçamento!',
   orcamento: 'Olá! Gostaria de solicitar um orçamento para aluguel de caçamba.',
   residencial: 'Olá! Preciso de uma caçamba para obra residencial. Podem me ajudar?',
   comercial: 'Olá! Preciso de caçambas para obra comercial. Quais são as condições?',
-  empresas: 'Olá! Tenho interesse no Plano Empresas GS. Podem me informar sobre as condições?',
+  empresas: 'Olá! Tenho interesse no Plano Empresas Jacaré. Podem me informar sobre as condições?',
   condominio: 'Olá! Preciso de caçambas para condomínio. Quais são as condições?',
   engenheiro: 'Olá! Sou engenheiro/empreiteiro e gostaria de conhecer as condições para parceria.',
-  contact: 'Olá! Entrei em contato através do formulário do site da GS Caçambas.',
+  contact: 'Olá! Entrei em contato através do formulário do site da Jacaré Entulhos.',
 } as const;
 
 // Navigation Items (Single Page Anchors)
@@ -65,7 +66,7 @@ export const SERVICES = [
     title: 'Empresas e Indústrias',
     description: 'Soluções completas de descarte de resíduos para empresas e indústrias da região.',
     icon: '🏭',
-    message: 'Olá! Tenho interesse no Plano Empresas GS. Podem me informar sobre as condições?',
+    message: 'Olá! Tenho interesse no Plano Empresas Jacaré. Podem me informar sobre as condições?',
   },
   {
     id: 'condominio',
@@ -85,7 +86,7 @@ export const SERVICES = [
 
 // Company Info
 export const COMPANY_INFO = {
-  name: 'GS Caçambas',
+  name: 'Jacaré Entulhos',
   title: 'Aluguel de Caçambas',
   tagline: 'A solução certa para o seu entulho',
   year: new Date().getFullYear(),
@@ -103,10 +104,10 @@ export const ANIMATION_TIMINGS = {
 } as const;
 
 // Gallery Images
-export const GALLERY_IMAGES = Array.from({ length: 10 }, (_, i) => ({
+export const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => ({
   id: i + 1,
   src: `/assets/images/galeria-${i + 1}.jpg`,
-  alt: `GS Caçambas - Obra ${i + 1}`,
+  alt: `Jacaré Entulhos - Obra ${i + 1}`,
 }));
 
 // Featured Images
@@ -147,7 +148,7 @@ export const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Solicite pelo WhatsApp',
-    description: 'Entre em contato diretamente com o Guilherme e informe o endereço e tipo de obra.',
+    description: 'Entre em contato diretamente conosco e informe o endereço e tipo de obra.',
     icon: '📱',
   },
   {
@@ -183,7 +184,7 @@ export const TESTIMONIALS = [
   {
     name: 'Carlos Eduardo',
     role: 'Proprietário - Reforma Residencial',
-    text: 'A entrega foi super rápida e o atendimento do Guilherme foi excelente. Caçamba no local no mesmo dia que liguei!',
+    text: 'A entrega foi super rápida e o atendimento da Jacaré Entulhos foi excelente. Caçamba no local no mesmo dia que liguei!',
     rating: 5,
     city: 'Jacareí',
   },

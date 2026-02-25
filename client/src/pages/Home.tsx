@@ -8,6 +8,7 @@ import {
   TESTIMONIALS,
   SERVICE_AREAS,
   STATS,
+  COMPANY_INFO,
 } from '@/lib/constants';
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
@@ -83,7 +84,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img
             src="/assets/images/hero-cacamba.jpg"
-            alt="GS Caçambas - Entrega de Caçamba"
+            alt={`${COMPANY_INFO.name} - Entrega de Caçamba`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
@@ -113,7 +114,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-4 animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
-              Aluguel de caçambas para entulho, reforma, construção e demolição. Entrega rápida, retirada no prazo e atendimento direto com quem resolve.
+              Aluguel de caçambas para entulho, reforma, construção e demolição com a {COMPANY_INFO.name}. Entrega rápida, retirada no prazo e atendimento direto.
             </p>
 
             <p className="text-base text-white/60 leading-relaxed max-w-xl mb-10 animate-in fade-in slide-in-from-left-10 duration-1000 delay-300">
@@ -164,9 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          STATS SECTION
-      ═══════════════════════════════════════════════════════ */}
+      {/* Stats Section */}
       <section className="py-16 md:py-20 bg-secondary relative overflow-hidden">
         <div className="h-1 construction-stripe w-full absolute top-0 left-0" />
         <div className="container relative z-10 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
@@ -185,9 +184,7 @@ export default function Home() {
         <div className="h-1 construction-stripe w-full absolute bottom-0 left-0" />
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          SOBRE SECTION
-      ═══════════════════════════════════════════════════════ */}
+      {/* Sobre Section */}
       <section id="sobre" className="py-24 md:py-32 bg-background">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -197,7 +194,7 @@ export default function Home() {
               <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden border-4 border-card shadow-2xl bg-muted">
                 <img
                   src="/assets/images/sobre-empresa.jpg"
-                  alt="GS Caçambas - Sobre a Empresa"
+                  alt={`${COMPANY_INFO.name} - Sobre a Empresa`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
@@ -221,316 +218,65 @@ export default function Home() {
             <div className="space-y-8 order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
                 <Shield size={16} className="text-primary" />
-                <span className="text-xs font-black text-primary uppercase tracking-widest">Sobre a GS Caçambas</span>
+                <span className="text-xs font-black text-primary uppercase tracking-widest">Nossa História</span>
               </div>
-
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight">
-                Tradição e confiança no{' '}
-                <span className="text-gradient-yellow">Vale do Paraíba</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1]">
+                Compromisso com a sua <br />
+                <span className="text-gradient-yellow">obra e o meio ambiente.</span>
               </h2>
-
-              <div className="space-y-5 text-muted-foreground leading-relaxed">
-                <p className="text-lg font-medium">
-                  A GS Caçambas é uma empresa especializada em locação de caçambas para entulho e resíduos de construção civil, atendendo Jacareí, São José dos Campos e Guararema.
+              <div className="space-y-6 text-lg text-muted-foreground font-medium leading-relaxed">
+                <p>
+                  A <span className="text-foreground font-bold">{COMPANY_INFO.name}</span> nasceu com o objetivo de profissionalizar o setor de locação de caçambas no Vale do Paraíba, oferecendo um serviço ágil, transparente e totalmente regularizado.
                 </p>
                 <p>
-                  Com frota própria e equipe comprometida, oferecemos um serviço ágil, confiável e sem complicação. Nosso diferencial está no atendimento direto com quem resolve — sem intermediários, sem burocracia.
-                </p>
-                <p>
-                  Somos uma empresa regularizada, com todas as licenças necessárias para operar na região, garantindo que o descarte do seu entulho seja feito de forma legal e ambientalmente responsável.
+                  Atendemos <span className="text-foreground font-bold">Jacareí, São José dos Campos e Guararema</span> com frota própria e equipamentos modernos, garantindo que seu entulho seja descartado de forma correta em áreas licenciadas.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 {[
-                  { icon: <Truck size={20} />, label: 'Frota Própria' },
-                  { icon: <Clock size={20} />, label: 'Entrega Rápida' },
-                  { icon: <Shield size={20} />, label: 'Empresa Regularizada' },
-                  { icon: <CheckCircle2 size={20} />, label: 'Sem Burocracia' },
+                  'Frota própria e moderna',
+                  'Descarte em local licenciado',
+                  'Atendimento via WhatsApp',
+                  'Entrega e retirada pontual',
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 bg-card border border-border rounded-2xl hover-lift">
-                    <span className="text-primary">{item.icon}</span>
-                    <span className="font-bold text-sm">{item.label}</span>
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 size={14} className="text-primary" />
+                    </div>
+                    <span className="font-bold text-sm">{item}</span>
                   </div>
                 ))}
               </div>
 
               <button
                 onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.orcamento)}
-                className="group relative px-8 py-5 bg-primary text-primary-foreground rounded-2xl font-black text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20 flex items-center gap-3"
+                className="px-10 py-5 bg-secondary text-secondary-foreground rounded-2xl font-black text-lg hover:bg-secondary/90 transition-all hover:scale-105 active:scale-95 flex items-center gap-3"
               >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <MessageCircle size={22} className="relative z-10" />
-                <span className="relative z-10">Falar com a GS Caçambas</span>
+                Falar com Especialista
+                <MessageCircle size={20} />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          GALLERY SECTION
-      ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 bg-muted/20 overflow-hidden">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto mb-12">
-          <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <Star size={16} className="text-primary fill-primary" />
-              <span className="text-xs font-black text-primary uppercase tracking-widest">Nossos Trabalhos</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Obras Atendidas</h2>
+      {/* Gallery Section */}
+      <section className="py-24 md:py-32 bg-muted/30 overflow-hidden">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto mb-16">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Nossas Caçambas em Ação</h2>
             <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-              Veja alguns dos trabalhos realizados pela GS Caçambas na região do Vale do Paraíba.
+              Confira alguns de nossos atendimentos em residências, comércios e indústrias da região.
             </p>
           </div>
         </div>
         <Gallery />
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          SERVICES SECTION
-      ═══════════════════════════════════════════════════════ */}
-      <section id="servicos" className="py-24 md:py-32 bg-background">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
-                <Truck size={16} className="text-primary" />
-                <span className="text-xs font-black text-primary uppercase tracking-widest">Nossos Serviços</span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">
-                Para cada obra,{' '}
-                <span className="text-gradient-yellow">uma solução</span>
-              </h2>
-              <p className="text-xl text-muted-foreground font-medium">
-                Atendemos todos os tipos de obra com agilidade e eficiência.
-              </p>
-            </div>
-            <button
-              onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.orcamento)}
-              className="text-primary font-black flex items-center gap-2 group text-lg hover:gap-4 transition-all"
-            >
-              Solicitar orçamento
-              <span className="w-8 h-[2px] bg-primary group-hover:w-12 transition-all" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {SERVICES.map((service, i) => (
-              <div
-                key={service.id}
-                className="group p-8 sm:p-10 bg-card border border-border rounded-[2.5rem] hover-lift hover-glow cursor-pointer shadow-sm"
-                onClick={() => handleWhatsApp(service.message)}
-              >
-                <div className="text-6xl mb-8 group-hover:scale-110 transition-transform inline-block">{service.icon}</div>
-                <h3 className="text-2xl font-black mb-4">{service.title}</h3>
-                <p className="text-muted-foreground font-medium leading-relaxed text-lg mb-8">{service.description}</p>
-                <div className="flex items-center gap-2 text-primary font-black group-hover:gap-4 transition-all">
-                  <MessageCircle size={18} />
-                  <span className="text-sm">Solicitar via WhatsApp</span>
-                  <span className="w-6 h-[2px] bg-primary group-hover:w-10 transition-all" />
-                </div>
-              </div>
-            ))}
-
-            {/* CTA Card */}
-            <div className="group p-8 sm:p-10 bg-primary rounded-[2.5rem] hover-lift cursor-pointer shadow-xl shadow-primary/20 sm:col-span-2 lg:col-span-1 flex flex-col justify-between"
-              onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.orcamento)}>
-              <div>
-                <div className="text-6xl mb-8 group-hover:scale-110 transition-transform inline-block">🚛</div>
-                <h3 className="text-2xl font-black mb-4 text-primary-foreground">Não encontrou o que precisa?</h3>
-                <p className="text-primary-foreground/80 font-medium leading-relaxed text-lg mb-8">
-                  Entre em contato e vamos encontrar a melhor solução para a sua obra.
-                </p>
-              </div>
-              <div className="flex items-center gap-3 bg-white/20 rounded-2xl p-4 group-hover:bg-white/30 transition-all">
-                <MessageCircle size={22} className="text-primary-foreground" />
-                <span className="font-black text-primary-foreground">Falar no WhatsApp</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          HOW IT WORKS SECTION
-      ═══════════════════════════════════════════════════════ */}
-      <section id="como-funciona" className="py-24 md:py-32 bg-secondary relative overflow-hidden">
-        <div className="h-1 construction-stripe w-full absolute top-0 left-0" />
-        <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 left-0 w-[30%] h-[30%] bg-primary/5 rounded-full blur-[100px]" />
-
-        <div className="container relative z-10 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full border border-primary/30 mb-6">
-              <Clock size={16} className="text-primary" />
-              <span className="text-xs font-black text-primary uppercase tracking-widest">Processo Simples</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6">
-              Como funciona?
-            </h2>
-            <p className="text-xl text-white/60 font-medium max-w-2xl mx-auto">
-              Em apenas 4 passos simples, você tem a caçamba no local e o entulho resolvido.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {HOW_IT_WORKS.map((step, i) => (
-              <div key={i} className="relative group">
-                {/* Connector line */}
-                {i < HOW_IT_WORKS.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-[calc(100%+0px)] w-full h-[2px] bg-gradient-to-r from-primary/50 to-transparent z-0" />
-                )}
-
-                <div className="relative z-10 p-8 bg-white/5 border border-white/10 rounded-[2.5rem] hover-lift group-hover:border-primary/30 transition-all">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black text-primary/30 leading-none">{step.step}</span>
-                    <span className="text-4xl group-hover:scale-110 transition-transform">{step.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-black text-white mb-3">{step.title}</h3>
-                  <p className="text-white/60 font-medium leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <button
-              onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.orcamento)}
-              className="group relative px-12 py-6 bg-primary text-primary-foreground rounded-2xl font-black text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-primary/30 inline-flex items-center gap-4"
-            >
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              <MessageCircle size={26} className="relative z-10" />
-              <span className="relative z-10">Solicitar Caçamba Agora</span>
-            </button>
-          </div>
-        </div>
-        <div className="h-1 construction-stripe w-full absolute bottom-0 left-0" />
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          SERVICE AREAS SECTION
-      ═══════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-muted/10">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="space-y-10">
-              <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
-                  <MapPin size={16} className="text-primary" />
-                  <span className="text-xs font-black text-primary uppercase tracking-widest">Área de Cobertura</span>
-                </div>
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
-                  Onde Atendemos
-                </h2>
-                <p className="text-xl text-muted-foreground font-medium leading-relaxed">
-                  Cobrimos toda a região do Vale do Paraíba com entrega rápida e pontual.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                {SERVICE_AREAS.map((area, i) => (
-                  <div key={i} className="flex items-start gap-5 p-6 bg-card border border-border rounded-2xl hover-lift group">
-                    <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                      <MapPin size={24} className="text-primary group-hover:text-primary-foreground transition-colors" />
-                    </div>
-                    <div>
-                      <p className="font-black text-xl">{area.city}, {area.state}</p>
-                      <p className="text-muted-foreground font-medium">{area.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <button
-                onClick={() => window.open(GOOGLE_MAPS.mapsLink, '_blank')}
-                className="w-full md:w-auto px-10 py-5 bg-primary text-primary-foreground rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20 flex items-center gap-3"
-              >
-                <MapPin size={22} />
-                Ver no Google Maps
-              </button>
-            </div>
-
-            <div className="h-[500px] rounded-[4rem] overflow-hidden border-8 border-card shadow-2xl relative group">
-              <iframe
-                src={GOOGLE_MAPS.embedUrl}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                className="grayscale hover:grayscale-0 transition-all duration-700"
-                title="Área de atendimento GS Caçambas"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          TESTIMONIALS SECTION
-      ═══════════════════════════════════════════════════════ */}
-      <section id="avaliacoes" className="py-24 md:py-32 bg-background">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
-              <Star size={16} className="text-primary fill-primary" />
-              <span className="text-xs font-black text-primary uppercase tracking-widest">Avaliações</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
-              O que nossos clientes dizem
-            </h2>
-            <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-              Mais de 500 clientes satisfeitos em toda a região do Vale do Paraíba.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((testimonial, i) => (
-              <div
-                key={i}
-                className="group p-8 bg-card border border-border rounded-[2.5rem] hover-lift hover-glow shadow-sm flex flex-col"
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-6">
-                  {Array.from({ length: testimonial.rating }).map((_, j) => (
-                    <Star key={j} size={18} className="text-primary fill-primary" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="text-muted-foreground font-medium leading-relaxed text-lg flex-1 mb-8">
-                  "{testimonial.text}"
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-black text-lg">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-black">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground font-medium">{testimonial.role}</p>
-                    <div className="flex items-center gap-1 mt-1">
-                      <MapPin size={12} className="text-primary" />
-                      <span className="text-xs text-primary font-bold">{testimonial.city}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          CTA BANNER
-      ═══════════════════════════════════════════════════════ */}
+      {/* CTA Banner */}
       <section className="py-24 md:py-32 container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="relative p-16 md:p-24 bg-secondary rounded-[4rem] overflow-hidden text-center shadow-2xl border border-primary/20">
-          {/* Background decoration */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,179,0,0.1),transparent)]" />
           <div className="absolute top-0 left-0 right-0 h-1.5 construction-stripe" />
           <div className="absolute bottom-0 left-0 right-0 h-1.5 construction-stripe" />
@@ -556,12 +302,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          CONTACT SECTION
-      ═══════════════════════════════════════════════════════ */}
+      {/* Contact Section */}
       <section id="contato" className="py-24 md:py-32 bg-muted/10">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          {/* Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
               <Mail size={16} className="text-primary" />
@@ -569,14 +312,13 @@ export default function Home() {
             </div>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
               Fale com a{' '}
-              <span className="text-gradient-yellow">GS Caçambas</span>
+              <span className="text-gradient-yellow">{COMPANY_INFO.name}</span>
             </h2>
             <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
               Escolha o canal que preferir. Estamos prontos para atender você.
             </p>
           </div>
 
-          {/* Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {[
               {
@@ -628,14 +370,12 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Form + Map */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Form */}
             <div className="p-12 md:p-16 bg-card border border-border rounded-[4rem] shadow-2xl">
               <div className="mb-12">
                 <h2 className="text-4xl font-black tracking-tighter mb-4">Envie uma Mensagem</h2>
                 <p className="text-lg text-muted-foreground font-medium leading-relaxed">
-                  Preencha os dados e fale diretamente com a GS Caçambas.
+                  Preencha os dados e fale diretamente com a {COMPANY_INFO.name}.
                 </p>
               </div>
 
@@ -660,7 +400,7 @@ export default function Home() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleFormChange}
-                      placeholder="(12) 99999-9999"
+                      placeholder="(12) 98850-9555"
                       className="h-16 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20 text-lg px-6"
                       required
                     />
@@ -703,7 +443,6 @@ export default function Home() {
               </form>
             </div>
 
-            {/* Map */}
             <div className="flex flex-col gap-8">
               <div className="flex-1 min-h-[400px] rounded-[4rem] overflow-hidden border-8 border-card shadow-2xl">
                 <iframe
@@ -715,15 +454,14 @@ export default function Home() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="grayscale hover:grayscale-0 transition-all duration-700"
-                  title="Localização GS Caçambas"
+                  title={`Localização ${COMPANY_INFO.name}`}
                 />
               </div>
 
-              {/* Quick CTA */}
               <div className="p-8 bg-card border border-border rounded-[3rem] shadow-xl">
                 <h3 className="text-2xl font-black mb-3">Atendimento Rápido</h3>
                 <p className="text-muted-foreground font-medium mb-6">
-                  Prefere falar diretamente? Clique abaixo e fale agora pelo WhatsApp.
+                  Prefere falar diretamente? Clique abaixo e fale agora pelo WhatsApp com a {COMPANY_INFO.name}.
                 </p>
                 <button
                   onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.floatingButton)}

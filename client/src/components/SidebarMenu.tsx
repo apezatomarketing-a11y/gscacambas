@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, MessageCircle, Home, Info, Truck, HelpCircle, Star, Mail, Menu, X } from 'lucide-react';
 import { useTheme } from '@/_core/hooks/useTheme';
-import { CONTACT_INFO, WHATSAPP_MESSAGES } from '@/lib/constants';
+import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/lib/constants';
 
 const NAVIGATION_ITEMS = [
   { label: 'Início', href: '#inicio', icon: Home },
@@ -66,11 +66,11 @@ export default function SidebarMenu() {
       <header className={`fixed top-0 left-0 right-0 h-16 ${glassClasses} border-b z-50 flex items-center justify-between px-4 md:hidden`}>
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg">
-            <img src="/assets/images/logo-gs.png" alt="GS Caçambas" className="w-full h-full object-contain" />
+            <img src="/assets/images/logo-jacare.png" alt={COMPANY_INFO.name} className="w-full h-full object-contain" />
           </div>
           <div>
-            <span className="font-black text-foreground text-sm leading-none block">GS Caçambas</span>
-            <span className="text-xs text-primary font-bold">Aluguel de Caçambas</span>
+            <span className="font-black text-foreground text-sm leading-none block">{COMPANY_INFO.name}</span>
+            <span className="text-xs text-primary font-bold">{COMPANY_INFO.title}</span>
           </div>
         </div>
         <button
@@ -148,13 +148,13 @@ export default function SidebarMenu() {
       >
         {/* Logo */}
         <div className="p-4 border-b border-border/50 flex items-center justify-center overflow-hidden h-20">
-          <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 shadow-lg bg-secondary flex items-center justify-center">
-            <img src="/assets/images/logo-gs.png" alt="GS Caçambas" className="w-full h-full object-contain" />
+          <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 shadow-lg bg-white flex items-center justify-center">
+            <img src="/assets/images/logo-jacare.png" alt={COMPANY_INFO.name} className="w-full h-full object-contain" />
           </div>
           {isExpanded && (
             <div className="ml-3 flex-1 animate-in fade-in slide-in-from-left-4 duration-300 overflow-hidden">
-              <p className="text-sm font-black text-foreground truncate leading-tight">GS Caçambas</p>
-              <p className="text-xs text-primary truncate font-bold">Aluguel de Caçambas</p>
+              <p className="text-sm font-black text-foreground truncate leading-tight">{COMPANY_INFO.name}</p>
+              <p className="text-xs text-primary truncate font-bold">{COMPANY_INFO.title}</p>
             </div>
           )}
         </div>
