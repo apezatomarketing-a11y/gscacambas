@@ -104,7 +104,7 @@ export const ANIMATION_TIMINGS = {
 } as const;
 
 // Gallery Images
-export const GALLERY_IMAGES = Array.from({ length: 20 }, (_, i) => ({
+export const GALLERY_IMAGES = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
   src: `/assets/images/galeria-${i + 1}.jpg`,
   alt: `Jacaré Entulhos - Obra ${i + 1}`,
