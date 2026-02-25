@@ -18,9 +18,9 @@ export const SOCIAL_MEDIA = {
 
 // Google Maps
 export const GOOGLE_MAPS = {
-  // Cobertura Jacareí, São José dos Campos e Guararema
-  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235789.23!2d-46.10!3d-23.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sJacare%C3%AD%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20e%20Guararema!5e0!3m2!1spt-BR!2sbr!4v1234567890',
-  mapsLink: 'https://www.google.com/maps/dir//Jacareí,+São+José+dos+Campos,+Guararema',
+  // Foco principal em São José dos Campos
+  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117917.26!2d-45.9272!3d-23.1791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a3a3a3a3a3a%3A0x3a3a3a3a3a3a3a3a!2sS%C3%A3o%20Jos%C3%A9%20dos%20Campos%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000',
+  mapsLink: 'https://www.google.com/maps/place/S%C3%A3o+Jos%C3%A9+dos+Campos,+SP',
 } as const;
 
 // WhatsApp Messages
@@ -104,7 +104,7 @@ export const ANIMATION_TIMINGS = {
 } as const;
 
 // Gallery Images
-export const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => ({
+export const GALLERY_IMAGES = Array.from({ length: 20 }, (_, i) => ({
   id: i + 1,
   src: `/assets/images/galeria-${i + 1}.jpg`,
   alt: `Jacaré Entulhos - Obra ${i + 1}`,
