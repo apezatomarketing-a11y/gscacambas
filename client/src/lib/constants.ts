@@ -103,10 +103,11 @@ export const ANIMATION_TIMINGS = {
   stagger: 80,
 } as const;
 
-// Gallery Images
+// Gallery Images - v2 com cache busting
+const CACHE_BUST = '?v=2025-02-25-final';
 export const GALLERY_IMAGES = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
-  src: `/assets/images/galeria-${i + 1}.jpg`,
+  src: `/assets/images/galeria-v2-${i + 1}.jpg${CACHE_BUST}`,
   alt: `Jacaré Entulhos - Obra ${i + 1}`,
 }));
 
